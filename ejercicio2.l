@@ -5,8 +5,8 @@ int min = 0;
 %}
 
 %%
-[A-Z]	{ printf("Mayuscula\t"); mayu++; }
-[a-z]	{ printf("Minuscula\t"); min++; }
+[A-Z]	{ printf("Mayúscula\t"); mayu++; }
+[a-z]	{ printf("Minúscula\t"); min++; }
 %%
 
 int yywrap() {
@@ -16,5 +16,5 @@ int yywrap() {
 int main () {
 	printf("Escribe una cadena de texto\n");
 	yylex();
-	printf("Mayuscula=%d and Minuscula=%d", mayu, min);
+	printf("Mayúsculas: %d, Minúsculas: %d", mayu, min);
 }
